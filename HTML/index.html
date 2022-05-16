@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>TP 1: Introducción a Javascript</title>
+        <script defer type="text/javascript" src="../JS/index.js"></script>
+    </head>
+
+    <body>
+        <form method="GET">
+            <p>Ingrese la nota de Matematica</p><input type="number" id="notaMatematica" onkeyup="validarNota(document.getElementById('notaMatematica').value)">
+            <p>Ingrese la nota de Lengua</p><input type="number" id="notaLengua" onkeyup="validarNota(document.getElementById('notaLengua').value)">
+            <p>Ingrese la nota de EFSI</p><input type="number" id="notaEfsi" onkeyup="validarNota(document.getElementById('notaEfsi').value)">
+            <br><br>
+            <button type="submit">
+                Calcular Promedio
+            </button>
+            <button type="submit">
+                Nota mas alta
+            </button>
+        </form>
+
+        <div id="mostrarResultado">
+            <p>Resultado</p><input type="number" id="resultado" readonly value=>
+        </div>
+
+    </body>
+</html>
