@@ -1,10 +1,11 @@
-let validarNota = () =>{
-    let nota=document.getElementById("notaMatematica").value;
+let validarNota = (nota,materia) =>{
+    console.log(nota)
+    console.log(materia)
     if(nota>=1 && nota <=10){
-        document.getElementById("notaMatematica").style.color="green"
+        document.getElementById(materia).style.color="green"
         return true;
     }else{
-        document.getElementById("notaMatematica").style.color="red"
+        document.getElementById(materia).style.color="red"
         return false;
     }
 }
