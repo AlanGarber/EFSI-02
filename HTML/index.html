@@ -10,7 +10,7 @@
             <p>Ingrese la nota de Lengua</p><input type="number" id="notaLengua" onkeyup="validarNota(document.getElementById('notaLengua').value,'notaLengua')">
             <p>Ingrese la nota de EFSI</p><input type="number" id="notaEfsi" onkeyup="validarNota(document.getElementById('notaEfsi').value,'notaEfsi')">
             <br><br>
-            <button type="submit">
+            <button type="submit" onkeyup="calcularPromedio(document.getElementById('notaMatematica').value,document.getElementById('notaLengua').value,document.getElementById('notaEfsi').value)">
                 Calcular Promedio
             </button>
             <button type="submit">
@@ -19,7 +19,7 @@
         </form>
 
         <div id="mostrarResultado">
-            <p>Resultado</p><input type="number" id="resultado" readonly value=>
+            <p>Resultado</p><input type="number" id="resultado" readonly>
         </div>
 
     </body>

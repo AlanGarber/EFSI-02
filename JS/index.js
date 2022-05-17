@@ -1,6 +1,4 @@
 let validarNota = (nota,materia) =>{
-    console.log(nota)
-    console.log(materia)
     if(nota>=1 && nota <=10){
         document.getElementById(materia).style.color="green"
         return true;
@@ -8,4 +6,10 @@ let validarNota = (nota,materia) =>{
         document.getElementById(materia).style.color="red"
         return false;
     }
+}
+
+let calcularPromedio = (nota1, nota2, nota3) => {
+    let promedio=(nota1+nota2+nota3)/3;
+    console.log(promedio)
+    document.getElementById("resultado").value=promedio;
 }
