@@ -9,7 +9,21 @@ let validarNota = (nota,materia) =>{
 }
 
 let calcularPromedio = (nota1, nota2, nota3) => {
-    let promedio=(nota1+nota2+nota3)/3;
-    console.log(promedio)
-    document.getElementById("resultado").value=promedio;
+    verificarInputNull(nota1,nota2,nota3)
+    let resultado=document.getElementById('resultado')
+    let promedio=(Number(nota1)+Number(nota2)+Number(nota3))/3;
+    resultado.value=promedio
+}
+
+let verificarInputNull = (nota1,nota2,nota3) => {
+    let inputs=[nota1,nota2,nota3]
+    let vacio=false;
+    inputs.forEach(nota => {
+        if(nota==null || nota==''){
+            vacio=true
+        }
+    });
+    if(vacio){
+        alert("Hay campos vacios")
+    }
 }

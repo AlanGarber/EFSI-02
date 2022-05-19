@@ -5,15 +5,15 @@
     </head>
 
     <body>
-        <form method="GET">
-            <p>Ingrese la nota de Matematica</p><input type="number" id="notaMatematica" onkeyup="validarNota(document.getElementById('notaMatematica').value,'notaMatematica')">
-            <p>Ingrese la nota de Lengua</p><input type="number" id="notaLengua" onkeyup="validarNota(document.getElementById('notaLengua').value,'notaLengua')">
-            <p>Ingrese la nota de EFSI</p><input type="number" id="notaEfsi" onkeyup="validarNota(document.getElementById('notaEfsi').value,'notaEfsi')">
+        <form id="formulario">
+            <p>Ingrese la nota de Matematica</p><input name="inputNota" type="number" id="notaMatematica" onkeyup="validarNota(document.getElementById('notaMatematica').value,'notaMatematica')">
+            <p>Ingrese la nota de Lengua</p><input name="inputNota" type="number" id="notaLengua" onkeyup="validarNota(document.getElementById('notaLengua').value,'notaLengua')">
+            <p>Ingrese la nota de EFSI</p><input name="inputNota" type="number" id="notaEfsi" onkeyup="validarNota(document.getElementById('notaEfsi').value,'notaEfsi')">
             <br><br>
-            <button type="submit" onkeyup="calcularPromedio(document.getElementById('notaMatematica').value,document.getElementById('notaLengua').value,document.getElementById('notaEfsi').value)">
+            <button type="button" onclick="calcularPromedio(document.getElementById('notaMatematica').value,document.getElementById('notaLengua').value,document.getElementById('notaEfsi').value);validarNota(document.getElementById('resultado').value,'resultado')">
                 Calcular Promedio
             </button>
-            <button type="submit">
+            <button type="button">
                 Nota mas alta
             </button>
         </form>
