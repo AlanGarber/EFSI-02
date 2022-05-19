@@ -10,16 +10,16 @@
             <p>Ingrese la nota de Lengua</p><input name="inputNota" type="number" id="notaLengua" onkeyup="validarNota(document.getElementById('notaLengua').value,'notaLengua')">
             <p>Ingrese la nota de EFSI</p><input name="inputNota" type="number" id="notaEfsi" onkeyup="validarNota(document.getElementById('notaEfsi').value,'notaEfsi')">
             <br><br>
-            <button type="button" onclick="calcularPromedio(document.getElementById('notaMatematica').value,document.getElementById('notaLengua').value,document.getElementById('notaEfsi').value);validarNota(document.getElementById('resultado').value,'resultado')">
+            <button type="button" onclick="calcularPromedio();validarNota(document.getElementById('resultado').value,'resultado')">
                 Calcular Promedio
             </button>
-            <button type="button">
+            <button type="button" onclick="materiaMasAlta();">
                 Nota mas alta
             </button>
         </form>
 
         <div id="mostrarResultado">
-            <p>Resultado</p><input type="number" id="resultado" readonly>
+            <p>Resultado</p><input type="text" id="resultado" readonly>
         </div>
 
     </body>
