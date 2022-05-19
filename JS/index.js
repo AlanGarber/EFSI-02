@@ -16,6 +16,14 @@ let calcularPromedio = () => {
     let promedio=(Number(nota1)+Number(nota2)+Number(nota3))/3;
     let promedioRed=promedio.toFixed(2)
     document.getElementById('resultado').value=promedioRed
+
+    if(promedioRed>=6 && promedioRed <=10){
+        document.getElementById('resultado').style.color="green"
+        document.getElementById('aprobo').src="../img/aprobado-ok.gif"
+    }else{
+        document.getElementById('resultado').style.color="red"
+        document.getElementById('aprobo').src="../img/exam-fail.gif"
+    }
 }
 
 let materiaMasAlta = () => {
@@ -39,7 +47,7 @@ let materiaMasAlta = () => {
         matMasAlta="EFSI"
     }
     document.getElementById('resultado').value=matMasAlta
-    document.getElementById('resultado').style.color="blue"
+    
 }
 
 let verificarInputNull = (nota1,nota2,nota3) => {
