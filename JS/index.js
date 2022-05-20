@@ -33,7 +33,9 @@ let materiaMasAlta = () => {
     let matMasAlta
     verificarInputNull(nota1,nota2,nota3)
     let notaMas=Number(Math.max(nota1,nota2,nota3)).toFixed(2)
-    if(notaMas==nota1 && notaMas==nota3){
+    if(notaMas==nota1 && notaMas==nota3 && notaMas==nota1){
+        matMasAlta="Matematica, EFSI y Lengua"
+    }else if(notaMas==nota1 && notaMas==nota3){
         matMasAlta="Matematica y EFSI"
     }else if(notaMas==nota1 && notaMas==nota2){
         matMasAlta="Matematica y Lengua"
@@ -41,12 +43,16 @@ let materiaMasAlta = () => {
         matMasAlta="EFSI y Lengua"
     }else if(notaMas==nota1){
         matMasAlta="Matematica"
+        document.getElementById('aprobo').src="../img/geometria-matematicas.gif"
     }else if(notaMas==nota2){
         matMasAlta="Lengua"
+        document.getElementById('aprobo').src="../img/lite.gif"
     }else if(notaMas==nota3){
+        document.getElementById('aprobo').src="../img/efsi.PNG"
         matMasAlta="EFSI"
     }
     document.getElementById('resultado').value=matMasAlta
+    document.getElementById('resultado').style.color="blue"
     
 }
 
@@ -54,7 +60,7 @@ let verificarInputNull = (nota1,nota2,nota3) => {
     let inputs=[nota1,nota2,nota3]
     let vacio=false;
     inputs.forEach(nota => {
-        if(nota==null || nota==''){
+        if(nota==null || nota=='' || isNaN(nota)){
             vacio=true
         }
     });
